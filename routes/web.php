@@ -20,4 +20,9 @@ Route::get('/', function () {
 
 Route::get('/', [MenuController::class, 'index']);
 
-Route::get('/menus/{menu}', [MenuController::class ,'show'])
+Route::get('/menus/create', [MenuController::class, 'create']);
+
+Route::get('/menus/{menu}', [MenuController::class ,'show']);
+
+Route::get('/menus', [MenuController::class, 'store']);
+Route::get('/menus/{menu}', [MenuController::class, 'delete']);

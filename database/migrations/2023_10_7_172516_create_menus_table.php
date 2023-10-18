@@ -20,11 +20,11 @@ return new class extends Migration
             $table->mediumblob('menu_image_name');
             $table->varchar('image_type');
             $table->int('image_size');
-            $table->string('calorie')
-            $table->string('carbs')
-            $table->string('protein')
-            $table->string('fat')
-            $table->string('salt')
+            $table->string('calorie')->nullable();
+            $table->string('carbs')->nullable();
+            $table->string('protein')->nullable();
+            $table->string('fat')->nullable();
+            $table->string('salt')->nullable();
             $table->foreignId('shop_id')->constrained();  
             $table->softDeletes();
         });
