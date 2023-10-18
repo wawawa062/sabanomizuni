@@ -12,7 +12,7 @@
             {{ $menu->menu }}
         </h1>
         <div class="content">
-            <div class="content__menu">
+            <div class="content_menu">
                 <h3>詳細</h3>
                 <p>{{ $menu->body }}</p>    
             </div>
