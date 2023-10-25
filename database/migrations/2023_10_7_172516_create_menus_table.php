@@ -17,15 +17,14 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('menu_name');
-            $table->mediumblob('menu_image_name');
-            $table->varchar('image_type');
-            $table->int('image_size');
+            $table->string('menu_content');
+            $table->string('menu_image_name')->nullable();
             $table->string('calorie')->nullable();
             $table->string('carbs')->nullable();
             $table->string('protein')->nullable();
             $table->string('fat')->nullable();
             $table->string('salt')->nullable();
-            $table->foreignId('shop_id')->constrained();  
+            //$table->foreignId('shop_id')->constrained();  
             $table->softDeletes();
         });
     }

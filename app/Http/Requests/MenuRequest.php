@@ -9,8 +9,8 @@ class MenuRequest extends FormRequest
     public function rules()
     {
         return [
-            'menu. name_menu' => 'required|string|max:100',
-            'menu. content_menu' => 'required|string|max:300'
+            'menu.menu_name' => 'required|string|max:100',
+            'menu.menu_content' => 'required|string|max:300'
         ];
     }
 }
