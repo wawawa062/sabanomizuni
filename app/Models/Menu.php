@@ -11,14 +11,21 @@ class Menu extends Model
     use HasFactory;
     use SoftDeletes;
     
+    protected $table='menus';
+    
+     protected $fillable =[
+    'menu_name',
+    'menu_content',
+    'image_menu',
+    'calorie',
+    'carbs',
+    'protein',
+    'fat',
+    'salt',
+    ];
+
     public function getPaginateByLimit(int $limit_count = 30)
     {
-        return $this->orderBy('updated_at', 'DESC')->paginate($limit_count)get();
+        return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
 }
-
-protected $fillable =[
-    'name_menu'
-    'content_menu',
-    'image_menu'
-    ];

@@ -17,9 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->mediumblob('shop_image');
-            $table->varchar('image_type');
-            $table->int('image_size');
+            $table->string('shop_image');
+            $table->integer('image_size');
         });
     }
 
