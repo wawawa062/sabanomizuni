@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('menu_name');
             $table->string('menu_content');
-            $table->string('menu_image_name')->nullable();
+            $table->string('menu_image')->nullable();
             $table->string('calorie')->nullable();
             $table->string('carbs')->nullable();
             $table->string('protein')->nullable();

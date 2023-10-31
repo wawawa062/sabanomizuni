@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\MenuRequest;
 use App\Models\Menu;
+use Cloudinary;
 
 class MenuController extends Controller
 {
@@ -25,6 +26,10 @@ class MenuController extends Controller
     public function store(MenuRequest $request, Menu $menu)
     {
         $input = $request['menu'];
+        if($request->file('menu_image')){
+        $image_url = Cloudinary::upload($request->file('menu_image')->getRealPath())->getSecurePath();
+        $input += ['menu_image' => $image_url];
+        }
         $menu->fill($input)->save();
         return redirect('/menus/' . $menu->id);
     }

@@ -16,7 +16,7 @@ class Menu extends Model
      protected $fillable =[
     'menu_name',
     'menu_content',
-    'image_menu',
+    'menu_image',
     'calorie',
     'carbs',
     'protein',
