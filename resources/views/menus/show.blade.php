@@ -20,6 +20,11 @@
                     <h3>詳細</h3>
                     <p>{{ $menu->menu_content }}</p>    
                 </div>
+                @if($menu->menu_image)
+                <div>
+                    <img src="{{ $menu->menu_image }}" alt="画像が読み込めません。"/>
+                </div>
+                @endif
                 <div class="edit">
                     <a href="/menus/{{ $menu->id }}/edit">メニュー内容編集</a>
                 </div>
